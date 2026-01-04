@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perpustakaan Digital Sekolah</title>
+
+  <!-- Hubungkan CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- BANNER -->
+ <header class="banner">
+  <div class="overlay">
+    <h1>Perpustakaan Digital Sekolah</h1>
+    <p>Akses buku di mana saja, kapan saja</p>
+  </div>
+</header>
+
+  <!-- NAVIGASI -->
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="koleksi.html">Koleksi Buku</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="peminjaman.html">Form Peminjaman</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="content">
+    <h2>Selamat Datang</h2>
+    <p>
+      Website ini membantu siswa mencari informasi buku, melihat kegiatan perpustakaan,
+      dan mengajukan peminjaman secara online. Kami berharap fasilitas digital ini
+      membuat kegiatan membaca menjadi lebih mudah dan menyenangkan.
+    </p>
+
+    <section class="highlight">
+      <h3>Kenapa Membaca Itu Penting?</h3>
+      <p>
+        Membaca dapat memperluas wawasan, meningkatkan konsentrasi,
+        dan membiasakan kita berpikir kritis. Dengan koleksi buku yang lengkap,
+        perpustakaan sekolah siap mendukung proses belajar kamu.
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p id="time"></p>
+    <p>© Clarensia Bernadet Sihura — 251011700196 — 01SIFP003</p>
+  </footer>
+
+  <!-- JAVASCRIPT WAKTU -->
+  <script>
+    function tampilkanWaktu() {
+      const now = new Date();
+      const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+      };
+      document.getElementById("time").innerText =
+        "Waktu sekarang: " + now.toLocaleDateString("id-ID", options);
+    }
+
+    setInterval(tampilkanWaktu, 1000);
+    tampilkanWaktu();
+  </script>
+
+</body>
+</html>

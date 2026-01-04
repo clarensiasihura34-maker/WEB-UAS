@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koleksi Buku</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- BANNER -->
+  <header class="banner">
+  <div class="overlay">
+    <h1>Perpustakaan Digital Sekolah</h1>
+    <p>Akses buku di mana saja, kapan saja</p>
+  </div>
+</header>
+
+
+  <!-- NAVIGASI -->
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="koleksi.html">Koleksi Buku</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="peminjaman.html">Form Peminjaman</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="content">
+    <h2>Daftar Buku</h2>
+    <p>Berikut beberapa koleksi buku yang tersedia di perpustakaan sekolah:</p>
+
+    <input
+  type="text"
+  id="search"
+  placeholder="Cari judul / penulis..."
+  style="padding:8px; width:100%; margin:10px 0;"
+>
+
+    <table border="1" width="100%" cellpadding="8" cellspacing="0">
+      <tr style="background:#ffffff;">
+        <th>Judul</th>
+        <th>Penulis</th>
+        <th>Kategori</th>
+        <th>Status</th>
+      </tr>
+
+      <tr>
+        <td>Laskar Pelangi</td>
+        <td>Andrea Hirata</td>
+        <td>Novel</td>
+        <td>Tersedia</td>
+      </tr>
+
+      <tr>
+        <td>Bumi</td>
+        <td>Tere Liye</td>
+        <td>Fantasi</td>
+        <td>Tersedia</td>
+      </tr>
+
+      <tr>
+        <td>Ensiklopedia Sains</td>
+        <td>Tim Edukasi</td>
+        <td>Ilmu Pengetahuan</td>
+        <td>Dipinjam</td>
+      </tr>
+
+      <tr>
+        <td>Programming</td>
+        <td>John  Dean</td>
+        <td>Pendidikan</td>
+        <td>Tersedia</td>
+      </tr>
+    </table>
+
+    <br>
+    <p>
+      Koleksi akan terus diperbarui agar siswa bisa mendapatkan bacaan menarik dan bermanfaat.
+      Jika ingin meminjam, silakan gunakan menu <strong>Form Peminjaman</strong>.
+    </p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p id="time"></p>
+    <p>© Clarensia Bernadet Sihura — 251011700196 — 01SIFP003</p>
+  </footer>
+
+  <!-- JAVASCRIPT WAKTU -->
+  <script>
+    function tampilkanWaktu() {
+      const now = new Date();
+      const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+      };
+      document.getElementById("time").innerText =
+        "Waktu sekarang: " + now.toLocaleDateString("id-ID", options);
+    }
+
+    setInterval(tampilkanWaktu, 1000);
+    tampilkanWaktu();
+  </script>
+
+</body>
+</html>
